@@ -1,0 +1,49 @@
+# Tests
+
+## Test 1 - Solicitar una hora veterinaria [sanity]
+Viewport: desktop
+Covers: navegación a reservas, validación y envío del formulario
+Description: Verifica el flujo principal para solicitar atención veterinaria.
+
+Steps:
+1. Seleccionar "Agendar una consulta"
+2. Completar nombre, teléfono, mascota y elegir "Consulta preventiva"
+3. Enviar el formulario
+
+Expected: Se muestra una confirmación visible indicando que la solicitud fue preparada.
+
+## Test 2 - Consultar una urgencia y ubicación
+Viewport: mobile
+Covers: navegación móvil, sección de urgencias y enlace de ubicación
+Description: Verifica que una persona pueda encontrar rápidamente orientación de urgencia y la dirección en celular.
+
+Steps:
+1. Abrir el menú móvil
+2. Seleccionar "Urgencias"
+3. Seleccionar "Ver ubicación"
+
+Expected: Se muestra la dirección Paul Harris 931 y la opción "Cómo llegar".
+
+## Test 3 - Impedir una solicitud incompleta
+Viewport: desktop
+Covers: validación de campos obligatorios del formulario
+Description: Verifica que no se confirme una reserva sin datos mínimos.
+
+Steps:
+1. Ir a "Solicita una hora"
+2. Dejar los campos obligatorios vacíos
+3. Seleccionar "Preparar solicitud"
+
+Expected: El navegador señala los campos requeridos y no aparece el mensaje de confirmación.
+
+## Test 4 - Explorar servicios desde navegación móvil
+Viewport: mobile
+Covers: menú responsive y catálogo de servicios
+Description: Verifica que el menú móvil permita acceder a todos los servicios ofrecidos.
+
+Steps:
+1. Abrir el botón "Menú"
+2. Seleccionar "Servicios"
+3. Revisar las tarjetas de servicios
+
+Expected: Se muestran consulta preventiva, urgencias 24h, cirugía, ecografía, vacunación y peluquería.
